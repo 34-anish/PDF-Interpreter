@@ -12,8 +12,8 @@ with st.sidebar:
     st.button("process")
 	
 ```
-![dcb04cdc8145139a75593f855a006fa8.png](../_resources/dcb04cdc8145139a75593f855a006fa8.png)
-![e33cb8ad2dba0d2654491300b813a968.png](../_resources/e33cb8ad2dba0d2654491300b813a968.png)
+![dcb04cdc8145139a75593f855a006fa8.png](./_resources/dcb04cdc8145139a75593f855a006fa8.png)
+![e33cb8ad2dba0d2654491300b813a968.png](./_resources/e33cb8ad2dba0d2654491300b813a968.png)
 **Explanation**
 - The pdfs can be entered by the users , the pdf is divided into the chunk of text which is converted into the embeddings(which is nothing but a number or a vector/number representation of the text)
 - The embeddings are stored in the database (chroma, pinecone)
@@ -21,7 +21,7 @@ with st.sidebar:
 - The *semantic search* is done which means to find the similarity with the questions and the embeddings
 *Accepting the multiple pdfs to read over*
 The next step will be to accept the multiple pdfs and convert it into the texts
-![88945e0425320c78808af4002dca1e6f.png](../_resources/88945e0425320c78808af4002dca1e6f.png) 
+![88945e0425320c78808af4002dca1e6f.png](./_resources/88945e0425320c78808af4002dca1e6f.png) 
 ```
 import streamlit as st
 from dotenv import load_dotenv
@@ -48,10 +48,10 @@ with st.sidebar:
 st.write(raw_text)
 
 ```
-![22eb4e502b71aa3c35aa1ed293f1434b.png](../_resources/22eb4e502b71aa3c35aa1ed293f1434b.png)
+![22eb4e502b71aa3c35aa1ed293f1434b.png](./_resources/22eb4e502b71aa3c35aa1ed293f1434b.png)
 Next up we need to deal with getting the chunks of the text from the entered text .
-![6b75143a19cfa7c59f43229610a1deb8.png](../_resources/6b75143a19cfa7c59f43229610a1deb8.png)
-![9e96a1f532c2c64bdf86c386c64fd965.png](../_resources/9e96a1f532c2c64bdf86c386c64fd965.png)
+![6b75143a19cfa7c59f43229610a1deb8.png](./_resources/6b75143a19cfa7c59f43229610a1deb8.png)
+![9e96a1f532c2c64bdf86c386c64fd965.png](./_resources/9e96a1f532c2c64bdf86c386c64fd965.png)
 ```
 import streamlit as st
 from dotenv import load_dotenv
@@ -95,12 +95,12 @@ with st.sidebar:
             st.write(text_chunks)
         # st.write(raw_text)
 ```
-![67dc9bac4ce6f563ba2dccd7e5eb019d.png](../_resources/67dc9bac4ce6f563ba2dccd7e5eb019d.png)
+![67dc9bac4ce6f563ba2dccd7e5eb019d.png](./_resources/67dc9bac4ce6f563ba2dccd7e5eb019d.png)
 example 1 and 2 are two chinks of size 1000 and 200 overlapping meaning the first word of the 2nd chunk starts 200 words before of the 2nd chunk.
-![3bab14639ac6bcfd1287b403267857de.png](../_resources/3bab14639ac6bcfd1287b403267857de.png)
+![3bab14639ac6bcfd1287b403267857de.png](./_resources/3bab14639ac6bcfd1287b403267857de.png)
 Embeddings are stored locally into the vector store with the help of 	FAISS  
-![f59861667f237a54d3886fe8a6fda21e.png](../_resources/f59861667f237a54d3886fe8a6fda21e.png)
-![a55932b3b18be6fd0ebcc39da03d3910.png](../_resources/a55932b3b18be6fd0ebcc39da03d3910.png)
+![f59861667f237a54d3886fe8a6fda21e.png](./_resources/f59861667f237a54d3886fe8a6fda21e.png)
+![a55932b3b18be6fd0ebcc39da03d3910.png](./_resources/a55932b3b18be6fd0ebcc39da03d3910.png)
 ```
 import streamlit as st
 from dotenv import load_dotenv
@@ -157,5 +157,5 @@ with st.sidebar:
             st.write(text_chunks)
         # st.write(raw_text)
 ```
-**![b07aba2019e4cd4dcb417a54f3cbfb42.png](../_resources/b07aba2019e4cd4dcb417a54f3cbfb42.png)**
+**![b07aba2019e4cd4dcb417a54f3cbfb42.png](./_resources/b07aba2019e4cd4dcb417a54f3cbfb42.png)**
 Inspired by: https://github.com/alejandro-ao/ask-multiple-pdfs
